@@ -63,6 +63,5 @@ int virtualEpisode()
 		if (endtile == bombPoint || endtile == endPoint)
 			END = true;
 	}
-	MDP_update();
 	return 0;
 }

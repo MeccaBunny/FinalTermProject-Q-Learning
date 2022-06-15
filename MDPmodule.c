@@ -14,7 +14,7 @@ int NMh;
 
 MDPN* search;
 MDPN NULLnode;
-int age = 1;
+int age;
 
 int MDPN_init(MDPN* node, int index)
 {
@@ -219,6 +219,8 @@ int MDP_init()
 
 		NM[by][bx].reward = -1;
 	}
+
+	age = 1;
 }
 void MDP_end()
 {
@@ -231,6 +233,7 @@ void MDP_end()
 	}
 	free(NM);
 	MDPN_end(&NULLnode);
+	int age = 1;
 }
 int MDP_update()
 {
@@ -239,7 +242,6 @@ int MDP_update()
 Direction MDP_decision()
 {
 	age += 1;
-
 	Direction direction = roller_roll(&search->roller, (1 / (1 + exp(-age / 100000))));
 	switch (direction)
 	{
