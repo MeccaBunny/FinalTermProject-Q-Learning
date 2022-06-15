@@ -19,9 +19,6 @@ Lake_msg_type* msg;
 
 void Lake_createbm(int w, int h, int bn)
 {
-	if (bm != NULL)
-		Lake_endgame();
-
 	bmw = w;
 	bmh = h;
 	numofBomb = bn;
