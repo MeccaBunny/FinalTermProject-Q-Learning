@@ -126,32 +126,32 @@ int MDPN_Control(MDPN* target, Direction direction)
 }
 int MDPN_show(MDPN* target)
 {
-	//printf("(");
-	//
-	//if (target->up_next)
-	//	printf("%d",target->up_next->index);
-	//else
-	//	printf("X");
-	//printf("/");
-	//
-	//if (target->right_next)
-	//	printf("%d", target->right_next->index);
-	//else
-	//	printf("X");
-	//printf("/");
-	//
-	//if (target->down_next)
-	//	printf("%d", target->down_next->index);
-	//else
-	//	printf("X");
-	//printf("/");
-	//
-	//if (target->left_next)
-	//	printf("%d", target->left_next->index);
-	//else
-	//	printf("X");
-	//
-	//printf(")");
+	printf("(");
+	
+	if (target->up_next)
+		printf("%d",target->up_next->index);
+	else
+		printf("X");
+	printf("/");
+	
+	if (target->right_next)
+		printf("%d", target->right_next->index);
+	else
+		printf("X");
+	printf("/");
+	
+	if (target->down_next)
+		printf("%d", target->down_next->index);
+	else
+		printf("X");
+	printf("/");
+	
+	if (target->left_next)
+		printf("%d", target->left_next->index);
+	else
+		printf("X");
+	
+	printf(")");
 }
 
 int MDP_init()
