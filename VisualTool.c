@@ -49,7 +49,6 @@ int prtLoading(showSequence step)
 		gotoxy(100, 20); printf("%c", 217);
 		for (int i = 1; i < 99; i++) { gotoxy(i, 20); printf("%c", 196); }
 		gotoxy(30, 10); printf("Learning by trial of episode.");
-		Sleep(3000);
 	}
 	else if (step == step3)
 	{
