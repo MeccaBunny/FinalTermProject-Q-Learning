@@ -1,5 +1,5 @@
 /***************************************************************************
-* CBNU ¿ÀÇÂ¼Ò½º±âÃÊÇÁ·ÎÁ§Æ®2022 ±â¸»ÇÁ·ÎÁ§Æ® ¹Ú¿µÁØ2021042010
+* CBNU ì˜¤í”ˆì†ŒìŠ¤ê¸°ì´ˆí”„ë¡œì íŠ¸2022 ê¸°ë§í”„ë¡œì íŠ¸ ë°•ì˜ì¤€2021042010
 * Q-Learning
 ***************************************************************************/
 #include"VisualTool.h"
@@ -8,6 +8,26 @@
 
 int main(void)
 {	
+	//example when map of LakeGame is large.
+	prtLoading(step1);
+	Lake_createbm(49, 9, 100);
+	setup();
+	clearScreen();
+	for (int i = 0; i < 5; i++)
+		showEpisode(); // Episode before learning.
+
+	prtLoading(step2);
+	for (int i = 0; i < 100000; i++)
+		virtualEpisode(); // Learning by trial of the episode.
+	clearScreen();
+
+	prtLoading(step3);
+	clearScreen();
+	for (int i = 0; i < 5; i++)
+		showEpisode(); // Episode after trial.
+	end();
+
+	//example to show how q is updated.
 	prtLoading(step1);
 	Lake_createbm(5, 5, 3);
 	setup();
