@@ -8,7 +8,7 @@
 
 int main(void)
 {	
-	//example when map of LakeGame is large.
+	//Example when map of LakeGame is large.
 	prtLoading(step1);
 	Lake_createbm(49, 9, 100);
 	setup();
@@ -27,7 +27,7 @@ int main(void)
 		showEpisode(); // Episode after trial.
 	end();
 
-	//example to show how q is updated.
+	//Example to show how q is updated.
 	prtLoading(step1);
 	Lake_createbm(5, 5, 3);
 	setup();
